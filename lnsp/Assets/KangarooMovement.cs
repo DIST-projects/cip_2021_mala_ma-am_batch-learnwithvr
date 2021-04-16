@@ -21,9 +21,15 @@ public class KangarooMovement : MonoBehaviour
        
         Vector3 a=transform.position;
         Vector3 b=target.position;
+        if(Mathf.Floor(a.x)!=Mathf.Floor(b.x))
+        {
         transform.position=Vector3.MoveTowards(a,Vector3.Lerp(a,b,t),speed);
-  
         anim.SetBool("IsWalking",true);
+        }
+        else
+        {
+          anim.SetBool("IsWalking",false);
+        }
               
     }
 }
