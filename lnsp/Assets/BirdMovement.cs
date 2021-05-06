@@ -17,15 +17,14 @@ public class BirdMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    IEnumerator Movement()  
     {
+        yield return new WaitForSeconds(23f);   
         Vector3 peacockpos=peacock.position;
         Vector3 peacocktargpos=peacocktarget.position;
-        if(Mathf.Floor(peacockpos.x)==Mathf.Floor(peacocktargpos.x))
-        {      
         Vector3 a=transform.position;
         Vector3 b=target.position;
-        if(Mathf.Floor(a.x)!=Mathf.Floor(b.x))
+        if(Mathf.Floor(a.x)!=Mathf.Floor(b.x) || Mathf.Floor(a.y)!=Mathf.Floor(b.y) || Mathf.Floor(a.z)!=Mathf.Floor(b.z))
         {
         transform.position=Vector3.MoveTowards(a,Vector3.Lerp(a,b,t),speed);
         anim.SetBool("IsFlying",true);
@@ -35,8 +34,12 @@ public class BirdMovement : MonoBehaviour
          anim.SetBool("IsFlying",false);
         }
         
-        }
+      
+    }
 
+    void FixedUpdate()
+    {
+        StartCoroutine(Movement());
               
     }
 }
