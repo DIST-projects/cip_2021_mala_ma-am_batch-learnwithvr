@@ -16,27 +16,30 @@ public class TigerMovement : MonoBehaviour
         anim=GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    IEnumerator Movement()
     {
-        Vector3 birdpos=bird.position;
-        Vector3 birdtargpos=birdtarget.position;
-        if(Mathf.Floor(birdpos.x)==Mathf.Floor(birdtargpos.x))
-        {      
+        yield return new WaitForSeconds(17f);
         Vector3 a=transform.position;
         Vector3 b=target.position;
-        if(Mathf.Floor(a.x)!=Mathf.Floor(b.x))
+        if(Mathf.Floor(a.x)!=Mathf.Floor(b.x) || Mathf.Floor(a.y)!=Mathf.Floor(b.y) || Mathf.Floor(a.z)!=Mathf.Floor(b.z))
         {
         transform.position=Vector3.MoveTowards(a,Vector3.Lerp(a,b,t),speed);
         anim.SetBool("IsWalking",true);
         }
         else
         {
-         anim.SetBool("IsWalking",false);
-        }
-        
-        }
+          float degrees = 160;
+          Vector3 to = new Vector3(0,degrees,0);
+          transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime);
+          anim.SetBool("IsWalking",false);
+        }  
+    } 
 
-              
+    void FixedUpdate()
+    {
+       StartCoroutine(Movement());     
     }
+ 
 }
