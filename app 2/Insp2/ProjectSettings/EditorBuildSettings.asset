@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: ff371807310460642851b69e521c0ac9
+  - enabled: 1
+    path: Assets/Scenes/Exercise1.unity
+    guid: 8a5496285ce266b408d7886ef23516d5
+  - enabled: 1
+    path: Assets/Scenes/Exercise2.unity
+    guid: abcfcace39d51e24b9bc4c8de07a0ea9
+  - enabled: 1
+    path: Assets/Scenes/Exercise3.unity
+    guid: cbf47f3b6b46e0943b815dfac2773bcf
+  - enabled: 1
+    path: Assets/Scenes/Exercise4.unity
+    guid: 8cf25d7600ba47e4a9352bc2c424d981
+  - enabled: 1
+    path: Assets/Scenes/Exercise5.unity
+    guid: bd1bb0ee91c002c4dbb0b9ca02bf1bcb
   m_configObjects: {}

@@ -2,11 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Checker : MonoBehaviour
 {
     public bool isRight = false;
     public GameController gameController;
+    
+     public void retry1()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void menu()
+
+    {
+         SceneManager.LoadScene("Menu");
+    }
 
 
     public void Answer()

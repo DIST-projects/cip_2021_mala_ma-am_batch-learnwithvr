@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI DisplayQuestion;
     public TextMeshProUGUI DisplayScore;
     int questionsCount = 0;
+
+
     public void displayScore()
     {
        quizp.SetActive(false);
