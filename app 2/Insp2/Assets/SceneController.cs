@@ -34,6 +34,6 @@ public class SceneController : MonoBehaviour
     }
     public void Exercise6()
     {
-         SceneManager.LoadScene("Exercise6");
+         SceneManager.LoadScene("Exercise5");
     }
 }

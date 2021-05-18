@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     {
        quizp.SetActive(false);
        scorep.SetActive(true);
-       DisplayScore.text="Your Score is "+ gameScore + "/" + questionsCount;
+       DisplayScore.text="   cq;fs; kjpg;ngz;fs; "+ questionsCount  +  " f;F "  + gameScore;
     }
     private void Start()
     {
